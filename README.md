@@ -73,7 +73,7 @@ The model classifies text into 8 emotional categories:
 ## Demo
 Click this image to watch the demo video
 
-[![BERT Chinese Emotion Classification - BERT中文情緒分析練習](https://img.youtube.com/vi/_mD591UNjw8/0.jpg)](https://youtu.be/8V4jmDXDgwI)
+[![BERT Chinese Emotion Classification - BERT中文情緒分析練習](https://img.youtube.com/vi/8V4jmDXDgwI/0.jpg)](https://youtu.be/8V4jmDXDgwI)
 
 eval/loss, eval/f1 graph
 
