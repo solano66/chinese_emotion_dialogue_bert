@@ -70,6 +70,11 @@ The model classifies text into 8 emotional categories:
 - Gradient accumulation steps: 2
 - Training/validation split: 80/20
 
+## Demo
+Click this image to watch the demo video
+
+[![BERT Chinese Emotion Classification - BERT中文情緒分析練習](https://img.youtube.com/vi/_mD591UNjw8/0.jpg)](https://www.youtube.com/watch?v=_mD591UNjw8)
+
 ## Versioning
 - Python 3.10
 
