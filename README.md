@@ -5,6 +5,7 @@ A Python notebook demonstrating fine-tuning of BERT model for Chinese emotion cl
 ## Project Structure
 ```
 .
+├── finetune.ipynb
 ├── predict.ipynb
 ├── output/
 │   ├── [trained model files]
@@ -25,17 +26,17 @@ pip install -r requirements.txt
 
 ## Usage
 1. Mount Google Drive (if using Google Colab)
-2. Run the training section to fine-tune BERT model
-3. Use the prediction section to classify new texts
+2. Run finetune.ipynb to train the model
+3. Use predict.ipynb to classify new texts
 
 Example prediction:
 ```python
 texts = [
-    "我每天都能跟她一起上學，我好開心！",
-    "最好的朋友要離開臺灣了，以後可能不容易再見面...",
-    "我覺得我快不行了...",
-    "剛剛收到研究所錄取的通知書！",
-    "今年的冬天好像比較晚來。"
+    我每天都能跟她一起上學，我好開心！ => 開心語調 (0.97)
+    最好的朋友要離開臺灣了，以後可能不容易再見面... => 悲傷語調 (0.90)
+    我覺得我快不行了... => 悲傷語調 (0.78)
+    剛剛收到研究所錄取的通知書！ => 開心語調 (0.94)
+    今年的冬天好像比較晚來。 => 平淡語氣 (0.95)
 ]
 ```
 
@@ -60,18 +61,17 @@ The model classifies text into 8 emotional categories:
 - Pre-trained Chinese BERT model from Google
 
 ## Model Details
-- Base Model: google-bert/bert-base-chinese
-- Max Sequence Length: 512
-- Training Arguments:
-- Epochs: 2
-- Batch Size: 32
-- Learning Rate: 5e-5
-- Gradient Accumulation Steps: 2
+- Max sequence length: 512
+- Training epochs: 5
+- Batch size: 16 (effective batch size: 32 with gradient accumulation)
+- Learning rate: 2e-5
+- Warmup ratio: 0.1
+- Weight decay: 0.01
+- Gradient accumulation steps: 2
+- Training/validation split: 80/20
 
 ## Versioning
-- Python 3.x
-- PyTorch
-- Transformers library
+- Python 3.10
 
 ## Authors
 [solano66](https://github.com/solano66)
