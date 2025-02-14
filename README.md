@@ -23,9 +23,6 @@ pip install -r requirements.txt
 - `accelerate` - For optimized training
 - `scikit-learn` - For metrics calculation
 
-## Coding style
-Follow PEP8 unless explicitly specified otherwise
-
 ## Usage
 1. Mount Google Drive (if using Google Colab)
 2. Run the training section to fine-tune BERT model
@@ -34,10 +31,12 @@ Follow PEP8 unless explicitly specified otherwise
 Example prediction:
 ```python
 texts = [
-  "我每天都能跟她一起上學，我好開心！",
-  "最好的朋友要離開臺灣了，以後可能不容易再見面..."
+    "我每天都能跟她一起上學，我好開心！",
+    "最好的朋友要離開臺灣了，以後可能不容易再見面...",
+    "我覺得我快不行了...",
+    "剛剛收到研究所錄取的通知書！",
+    "今年的冬天好像比較晚來。"
 ]
-pipe(texts)
 ```
 
 ## Emotion Categories
@@ -53,7 +52,7 @@ The model classifies text into 8 emotional categories:
 
 ## Data Sources and Model Base
 ### Training Dataset
-- [Chinese Multi-Emotion Dialogue Dataset](https://huggingface.co/datasets/Johnson8187/Chinese_Multi-Emotion_Dialogue_Dataset)
+- [Datasets:Johnson8187/Chinese Multi-Emotion Dialogue Dataset](https://huggingface.co/datasets/Johnson8187/Chinese_Multi-Emotion_Dialogue_Dataset)
 - A comprehensive dataset for Chinese emotion classification
 
 ### Base Model
@@ -81,4 +80,4 @@ The model classifies text into 8 emotional categories:
 - Hugging Face team for the Transformers library
 - Google BERT team for the pre-trained model
 - Johnson8187 for the Chinese Multi-Emotion Dialogue Dataset
- - Thank you to all the people who release code on GitHub
+### Thank you to all the people who release code on GitHub
